@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Plataforma Takaidioma | O Jeito Inteligente de Aprender</title>
+    <meta name="description" content="Aprenda japonês com os melhores métodos do mundo. Simples, direto e sem decoreba.">
+    <meta name="theme-color" content="#0D0C13">
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎌</text></svg>">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            purple: '#8B5CF6',
+                            dark: '#0D0C13',
+                            surface: '#1E1B2E',
+                            green: '#22c55e'
+                        }
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased relative bg-[#0D0C13]">
+
+    <div id="sakura-container" class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: 50;"></div>
+
+    <header class="fixed top-0 w-full p-4 flex justify-center z-50 backdrop-blur-md bg-[#0D0C13]/70 border-b border-white/5">
+        <div class="flex items-center gap-3 font-black text-xl tracking-tighter cursor-default">
+            <div class="w-10 h-10 rounded-full border border-brand-purple/50 bg-black/50 flex items-center justify-center overflow-hidden shadow-[0_0_15px_rgba(139,92,246,0.3)]">
+                <img src="logo_takanimes.png" alt="Logo" class="w-full h-full object-cover" onerror="this.onerror=null; this.parentNode.innerHTML='<i class=\'ph-fill ph-torii-gate text-brand-purple text-2xl\'></i>'">
+            </div>
+            <span>TAKAIDIOMA</span>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-12 px-4 text-center hero-bg z-10 min-h-[100dvh] flex flex-col justify-center items-center overflow-hidden">
+        
+        <div class="inline-flex items-center gap-3 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 mx-auto mb-6 backdrop-blur-md animate-fade-in-up">
+            <div class="flex -space-x-2">
+                <div class="w-6 h-6 rounded-full bg-gray-700 border border-brand-dark flex items-center justify-center text-[8px]">🎌</div>
+                <div class="w-6 h-6 rounded-full bg-gray-600 border border-brand-dark flex items-center justify-center text-[8px]">✈️</div>
+                <div class="w-6 h-6 rounded-full bg-gray-500 border border-brand-dark flex items-center justify-center text-[8px]">🧠</div>
+            </div>
+            <span class="text-xs font-medium text-gray-300"><span class="text-brand-green font-bold">+1.240</span> Alunos Ativos</span>
+        </div>
+
+        <h1 class="text-4xl sm:text-5xl md:text-7xl font-black leading-[1.1] mb-6 max-w-4xl mx-auto tracking-tight text-white drop-shadow-xl">
+            Domine o Japonês.<br>
+            <span class="text-gradient">Do Jeito Certo.</span>
+        </h1>
+
+        <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto mb-8 leading-relaxed px-2">
+            Reunimos as <span class="text-white font-bold">melhores técnicas do mundo</span> em uma plataforma simples. Aprenda de verdade, sem decoreba e no seu ritmo.
+        </p>
+
+        <div class="relative max-w-4xl w-full mx-auto mb-10 group perspective-1000 px-2">
+            <div class="absolute -inset-1 bg-gradient-to-r from-brand-purple to-blue-600 rounded-xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
+            
+            <div class="relative rounded-t-xl bg-[#0D0C13] border border-white/10 overflow-hidden shadow-2xl animate-float">
+                <div class="h-8 bg-[#1E1B2E] flex items-center px-4 gap-2 border-b border-white/5">
+                    <div class="flex gap-1.5">
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/80"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-green-500/80"></div>
+                    </div>
+                    <div class="mx-auto bg-[#000]/50 h-5 w-1/3 rounded-full flex items-center justify-center text-[8px] text-gray-600 font-mono">
+                        takaidioma.com/dashboard
+                    </div>
+                </div>
+
+                <div class="flex h-[250px] md:h-[400px]">
+                    <div class="w-16 md:w-48 bg-[#0D0C13] border-r border-white/10 p-3 hidden md:flex flex-col gap-2">
+                        <div class="h-8 bg-brand-purple/10 rounded-lg border border-brand-purple/20 flex items-center px-3 gap-2 text-xs text-white font-bold">
+                            <i class="ph-bold ph-map-trifold text-brand-purple"></i> Roteiro
+                        </div>
+                        <div class="h-8 hover:bg-white/5 rounded-lg flex items-center px-3 gap-2 text-xs text-gray-400">
+                            <i class="ph-bold ph-book-open-text"></i> Aulas
+                        </div>
+                        <div class="h-8 hover:bg-white/5 rounded-lg flex items-center px-3 gap-2 text-xs text-gray-400">
+                            <span>⛏️</span> Mineração
+                        </div>
+                        <div class="h-8 hover:bg-white/5 rounded-lg flex items-center px-3 gap-2 text-xs text-gray-400">
+                            <i class="ph-bold ph-cards"></i> Flashcards
+                        </div>
+                        <div class="mt-auto h-8 hover:bg-white/5 rounded-lg flex items-center px-3 gap-2 text-xs text-[#C4B5FD]">
+                            <i class="ph-bold ph-sparkle"></i> Sensei IA
+                        </div>
+                    </div>
+
+                    <div class="flex-1 bg-[#0D0C13] p-4 md:p-6 relative overflow-hidden flex flex-col items-center justify-center">
+                        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1541562232579-512a21360020?q=80&w=1200&auto=format&fit=crop')] bg-cover bg-center opacity-20"></div>
+                        
+                        <div class="relative z-10 glass-panel p-6 rounded-2xl w-full max-w-sm text-center border-t-2 border-brand-purple transform transition hover:scale-105 duration-300">
+                            <div class="text-[10px] uppercase tracking-widest text-brand-purple font-bold mb-2">Flashcard do Dia</div>
+                            <div class="text-4xl md:text-5xl font-black mb-2 text-white">挑戦</div>
+                            <div class="text-xl text-gray-300 mb-4 font-serif">Chōsen</div>
+                            <div class="h-px w-full bg-white/10 mb-4"></div>
+                            <p class="text-sm text-gray-400">"Desafio"</p>
+                            <div class="mt-4 flex justify-center gap-2">
+                                <button class="px-4 py-1 rounded bg-red-500/10 text-red-400 text-xs font-bold border border-red-500/30">Difícil</button>
+                                <button class="px-4 py-1 rounded bg-green-500/10 text-green-400 text-xs font-bold border border-green-500/30">Fácil</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex flex-col items-center gap-3 w-full px-4">
+            <a href="https://pay.hotmart.com/H102126157J?checkoutMode=10" class="btn-cta pulse-ring text-white font-black text-lg md:text-xl px-8 py-5 rounded-xl w-full max-w-md flex items-center justify-center gap-3 relative overflow-hidden group">
+                <span class="relative z-10 flex items-center gap-2">
+                    QUERO DESTRAVAR AGORA <i class="ph-bold ph-arrow-right"></i>
+                </span>
+                <div class="absolute top-0 -left-[100%] w-full h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12 group-hover:animate-[shine_1s_ease-in-out]"></div>
+            </a>
+            <div class="flex items-center gap-2 text-xs text-gray-400 mt-2">
+                <i class="ph-fill ph-lock-key text-brand-green"></i> Acesso Imediato • R$ 30,00 Taxa Única
+            </div>
+        </div>
+
+        <a href="#continuar" class="absolute bottom-6 animate-bounce opacity-50 hover:opacity-100 transition-opacity cursor-pointer p-4 z-20">
+            <i class="ph-bold ph-caret-down text-3xl text-white drop-shadow-[0_0_10px_rgba(139,92,246,0.5)]"></i>
+        </a>
+
+    </section>
+
+    <section id="continuar" class="py-20 bg-[#09080D] border-t border-white/5 px-4 scroll-mt-16">
+        <div class="max-w-5xl mx-auto">
+            <h2 class="text-2xl md:text-4xl font-bold text-center mb-4 text-white">
+                Por que você ainda <span class="text-red-500 line-through decoration-4 decoration-red-500/50">trava</span> ao falar?
+            </h2>
+            <p class="text-center text-gray-400 mb-12 max-w-2xl mx-auto">A culpa não é sua. A maioria dos cursos ensina regras complicadas antes de te ensinar a entender o idioma.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/40 transition duration-300 group">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="ph-duotone ph-brain"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Decoreba Não Funciona</h3>
+                    <p class="text-sm text-gray-400">Seu cérebro precisa entender o contexto para aprender de verdade, não decorar listas soltas.</p>
+                </div>
+                
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/40 transition duration-300 group">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="ph-duotone ph-currency-dollar"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Muito Caro</h3>
+                    <p class="text-sm text-gray-400">Escolas cobram mensalidades caras para te segurar por anos. Nós queremos sua autonomia.</p>
+                </div>
+                
+                <div class="glass-panel p-6 rounded-2xl hover:border-red-500/40 transition duration-300 group">
+                    <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center text-red-500 text-2xl mb-4 group-hover:scale-110 transition">
+                        <i class="ph-duotone ph-globe"></i>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Falta de Prática</h3>
+                    <p class="text-sm text-gray-400">Saber dizer "o livro está sobre a mesa" não te ajuda a assistir um anime ou conversar numa viagem.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 relative overflow-hidden bg-[#0D0C13]">
+        <div class="absolute top-1/2 right-0 -translate-y-1/2 w-[500px] h-[500px] bg-brand-purple opacity-5 blur-[120px] rounded-full pointer-events-none"></div>
+
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12 md:gap-20">
+            
+            <div class="md:w-1/2 order-2 md:order-1">
+                <span class="text-brand-purple font-bold tracking-widest text-xs uppercase mb-2 block flex items-center gap-2">
+                    <span class="w-2 h-2 rounded-full bg-brand-green animate-pulse"></span> Segredo dos Poliglotas
+                </span>
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-tight">
+                    O Método <br><span class="text-gradient">Inteligente</span>
+                </h2>
+                <p class="text-gray-400 mb-8 text-lg">Usamos técnicas validadas mundialmente para você aprender Japonês (e qualquer outro idioma depois).</p>
+                
+                <div class="space-y-6">
+                    <div class="flex gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-white/5 flex items-center justify-center text-brand-purple font-bold shrink-0 shadow-lg group-hover:border-brand-purple/50 transition">1</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Aprenda pelo Contexto</h4>
+                            <p class="text-sm text-gray-400 mt-1">Absorva o idioma naturalmente, como você aprendeu português quando era criança.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-white/5 flex items-center justify-center text-brand-purple font-bold shrink-0 shadow-lg group-hover:border-brand-purple/50 transition">2</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Imersão Divertida</h4>
+                            <p class="text-sm text-gray-400 mt-1">Use animes, mangás e cultura pop para se acostumar com o som real do idioma.</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4 group">
+                        <div class="w-12 h-12 rounded-xl bg-brand-surface border border-white/5 flex items-center justify-center text-brand-purple font-bold shrink-0 shadow-lg group-hover:border-brand-purple/50 transition">3</div>
+                        <div>
+                            <h4 class="font-bold text-white text-lg">Memória de Longo Prazo</h4>
+                            <p class="text-sm text-gray-400 mt-1">Nosso sistema te lembra das palavras na hora certa para você nunca mais esquecer.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="md:w-1/2 order-1 md:order-2 relative w-full">
+                <div class="absolute -inset-4 bg-gradient-to-tr from-brand-purple to-transparent opacity-20 blur-xl rounded-full"></div>
+                
+                <div class="glass-panel p-6 rounded-3xl border border-white/10 relative z-10 max-w-md mx-auto">
+                    <div class="flex items-center justify-between mb-6 border-b border-white/5 pb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="relative">
+                                <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-indigo-500 to-brand-purple p-[2px]">
+                                    <div class="w-full h-full rounded-full bg-black flex items-center justify-center">
+                                        <i class="ph-fill ph-robot text-2xl text-white"></i>
+                                    </div>
+                                </div>
+                                <div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-[#13111C] rounded-full"></div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-white leading-tight">Sensei IA</p>
+                                <p class="text-xs text-brand-green font-medium">Seu Mentor Pessoal</p>
+                            </div>
+                        </div>
+                        <div class="bg-white/5 p-2 rounded-full">
+                            <i class="ph-bold ph-dots-three-vertical text-gray-400"></i>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4 font-sans text-sm">
+                        <div class="flex justify-end">
+                            <div class="bg-brand-purple text-white px-4 py-3 rounded-2xl rounded-tr-sm max-w-[85%] shadow-lg">
+                                <p>Sensei, esse método serve para aprender Inglês depois?</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-start">
+                            <div class="bg-brand-surface border border-white/10 text-gray-200 px-4 py-3 rounded-2xl rounded-tl-sm max-w-[90%] shadow-lg">
+                                <p class="mb-2"><span class="text-brand-purple font-bold">@Taka-Sensei:</span> Com certeza!</p>
+                                <p>As técnicas que você vai aprender aqui são universais. Dominando o Japonês conosco, você ganha a habilidade de aprender qualquer outro idioma no futuro.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 relative">
+                        <div class="bg-black/40 h-10 rounded-full border border-white/10 flex items-center px-4 text-gray-500 text-xs">
+                            Digite sua dúvida...
+                        </div>
+                        <div class="absolute right-1 top-1 w-8 h-8 bg-brand-purple rounded-full flex items-center justify-center text-white shadow-lg">
+                            <i class="ph-bold ph-paper-plane-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="absolute -top-3 -right-3 bg-brand-green text-black text-[10px] font-bold px-3 py-1 rounded-full shadow-lg transform rotate-6 border border-white/20">
+                        DISPONÍVEL 24H
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="flex justify-center mt-12 md:mt-20">
+            <a href="https://pay.hotmart.com/H102126157J?checkoutMode=10" class="btn-cta text-white font-bold text-lg md:text-xl px-10 py-4 rounded-xl flex items-center gap-2 shadow-lg hover:scale-105 transition">
+                QUERO COMEÇAR AGORA <i class="ph-bold ph-arrow-right"></i>
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 px-4 bg-[#09080D]">
+        <div class="max-w-md mx-auto relative group">
+            <div class="absolute -inset-0.5 bg-gradient-to-b from-brand-purple to-brand-green rounded-3xl blur opacity-30 group-hover:opacity-50 transition duration-500"></div>
+            
+            <div class="relative bg-[#1E1B2E] rounded-3xl p-8 border border-white/10 shadow-2xl">
+                <div class="text-center mb-8">
+                    <span class="bg-brand-purple/20 text-brand-purple text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider border border-brand-purple/30">Oportunidade Única</span>
+                    <h3 class="text-2xl font-black text-white mt-4">Acesso Vitalício Completo</h3>
+                    <p class="text-gray-400 text-sm mt-2">Invista no seu conhecimento.</p>
+                </div>
+
+                <div class="space-y-4 mb-8">
+                    <div class="flex justify-between items-center text-sm border-b border-dashed border-white/10 pb-3">
+                        <span class="text-gray-200 flex items-center gap-2"><i class="ph-fill ph-check-circle text-brand-green"></i> Acesso à Plataforma</span>
+                        <span class="text-gray-500 line-through text-xs">R$ 197</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm border-b border-dashed border-white/10 pb-3">
+                        <span class="text-gray-200 flex items-center gap-2"><i class="ph-fill ph-check-circle text-brand-green"></i> Sistema de Memorização</span>
+                        <span class="text-gray-500 line-through text-xs">R$ 29/mês</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm border-b border-dashed border-white/10 pb-3">
+                        <span class="text-gray-200 flex items-center gap-2"><i class="ph-fill ph-check-circle text-brand-green"></i> Guia de Estudos Prático</span>
+                        <span class="text-gray-500 line-through text-xs">R$ 97</span>
+                    </div>
+                    <div class="flex justify-between items-center text-sm border-b border-dashed border-white/10 pb-3">
+                        <span class="text-gray-200 flex items-center gap-2"><i class="ph-fill ph-check-circle text-brand-green"></i> Comunidade de Estudos</span>
+                        <span class="text-gray-500 line-through text-xs">R$ 97,00</span>
+                    </div>
+                    
+                    <div class="flex justify-between items-center text-sm bg-brand-green/10 p-2 rounded border border-brand-green/20">
+                        <div class="flex flex-col">
+                            <span class="text-white font-bold flex items-center gap-2"><i class="ph-fill ph-gift text-brand-green"></i> Professor IA + Novos Métodos</span>
+                            <span class="text-[10px] text-gray-400 ml-6">Atualizações grátis para sempre</span>
+                        </div>
+                        <span class="text-brand-green font-bold text-xs">GRÁTIS</span>
+                    </div>
+                </div>
+
+                <div class="text-center mb-8 bg-[#0D0C13] p-4 rounded-xl border border-white/5">
+                    <p class="text-gray-500 text-xs mb-1">Valor Total: <span class="line-through">R$ 497,00</span></p>
+                    <div class="flex items-center justify-center gap-1 text-white">
+                        <span class="text-lg text-gray-400 font-normal mt-2">R$</span>
+                        <span class="text-6xl font-black tracking-tighter">30</span>
+                        <span class="text-lg text-gray-400 font-normal mt-4">,00</span>
+                    </div>
+                    <p class="text-brand-green text-xs font-bold uppercase mt-2 tracking-wide">Pagamento Único • Sem Mensalidades</p>
+                </div>
+
+                <a href="https://pay.hotmart.com/H102126157J?checkoutMode=10" class="btn-cta w-full text-white font-black text-center text-xl py-4 rounded-xl shadow-lg flex items-center justify-center gap-2 group mb-4">
+                    QUERO ENTRAR AGORA
+                </a>
+                
+                <div class="flex justify-center items-center gap-4 text-[10px] text-gray-500">
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-shield-check text-gray-400"></i> Garantia de 7 Dias</span>
+                    <span class="flex items-center gap-1"><i class="ph-fill ph-lock-key text-gray-400"></i> Compra Segura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 px-4 max-w-2xl mx-auto">
+        <h3 class="text-xl font-bold text-white mb-8 text-center flex items-center justify-center gap-2">
+            <i class="ph-duotone ph-question text-brand-purple"></i> Dúvidas Frequentes
+        </h3>
+        <div class="space-y-4">
+            <details class="glass-panel rounded-xl p-1 group transition-all duration-300 open:bg-white/5">
+                <summary class="font-bold text-gray-200 cursor-pointer list-none flex justify-between items-center p-4">
+                    Sou iniciante do zero, serve pra mim?
+                    <i class="ph-bold ph-caret-down group-open:rotate-180 transition text-brand-purple"></i>
+                </summary>
+                <div class="px-4 pb-4 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                    Com certeza. Começamos do básico absoluto. Você vai aprender a estrutura do idioma e, mais importante, COMO estudar para evoluir sozinho.
+                </div>
+            </details>
+            
+            <details class="glass-panel rounded-xl p-1 group transition-all duration-300 open:bg-white/5">
+                <summary class="font-bold text-gray-200 cursor-pointer list-none flex justify-between items-center p-4">
+                    Serve se eu quiser aprender outros idiomas depois?
+                    <i class="ph-bold ph-caret-down group-open:rotate-180 transition text-brand-purple"></i>
+                </summary>
+                <div class="px-4 pb-4 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                    Sim! O Takaidioma usa técnicas de poliglotismo. Ao dominar essas ferramentas com o japonês, você estará apto a aplicá-las em Inglês, Espanhol, Coreano, etc.
+                </div>
+            </details>
+
+            <details class="glass-panel rounded-xl p-1 group transition-all duration-300 open:bg-white/5">
+                <summary class="font-bold text-gray-200 cursor-pointer list-none flex justify-between items-center p-4">
+                    Terei acesso a novos métodos?
+                    <i class="ph-bold ph-caret-down group-open:rotate-180 transition text-brand-purple"></i>
+                </summary>
+                <div class="px-4 pb-4 text-sm text-gray-400 leading-relaxed border-t border-white/5 pt-4">
+                    Sim! Estamos sempre adicionando novas técnicas usadas mundialmente. Você terá acesso a todas as atualizações futuras sem custo extra.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-xs border-t border-[#1F1D2E] bg-[#09080D] px-4 pb-20">
+        <div class="flex justify-center items-center gap-2 mb-6 opacity-50 grayscale hover:grayscale-0 transition">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/Hotmart_logo.svg" alt="Hotmart" class="h-5">
+            <span class="ml-2 border-l border-gray-700 pl-2">Compra Processada e Segura</span>
+        </div>
+        <p class="mb-2 text-gray-500">© 2025 Takaidioma. Método Inteligente de Ensino.</p>
+        <p class="max-w-lg mx-auto opacity-40">Este site não é afiliado ao Facebook ou Google.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

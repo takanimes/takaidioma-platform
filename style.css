@@ -1,0 +1,75 @@
+html {
+    overscroll-behavior-y: none;
+    background-color: #0D0C13;
+    height: 100%;
+}
+
+body { 
+    font-family: 'Inter', sans-serif; 
+    background-color: #0D0C13; 
+    color: white; 
+    -webkit-tap-highlight-color: transparent;
+    overflow-x: hidden;
+    min-height: 100%;
+    position: relative;
+}
+
+.hero-bg {
+    background-image: 
+        radial-gradient(circle at 50% 0%, rgba(139, 92, 246, 0.12) 0%, transparent 60%),
+        linear-gradient(to bottom, #0D0C13 0%, rgba(13, 12, 19, 0.95) 100%);
+}
+
+.glass-panel {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.btn-cta {
+    background: linear-gradient(92deg, #22c55e 0%, #16a34a 100%);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.4);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.btn-cta:hover {
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.6);
+    transform: translateY(-2px);
+}
+.btn-cta:active { transform: scale(0.98); }
+
+.pulse-ring {
+    animation: pulse-ring 2s infinite;
+}
+
+@keyframes pulse-ring {
+    0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+/* Ajuste no Z-Index para as pétalas não sumirem atrás do fundo */
+.sakura {
+    position: absolute;
+    background: linear-gradient(120deg, #ffc0cb, #ffb7c5);
+    border-radius: 100% 0 100% 0;
+    opacity: 0.6;
+    pointer-events: none;
+    z-index: 50; /* Aumentado para garantir visibilidade */
+    filter: drop-shadow(0 0 2px rgba(255, 192, 203, 0.5));
+}
+
+@keyframes fall {
+    0% { top: -20px; transform: translateX(0) rotate(0deg); opacity: 0; }
+    10% { opacity: 0.8; }
+    100% { top: 100vh; transform: translateX(50px) rotate(360deg); opacity: 0; }
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #C4B5FD, #8B5CF6);
+    -webkit-background-clip: text;
+    background-clip: text; /* Correção do aviso do VSCode */
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
