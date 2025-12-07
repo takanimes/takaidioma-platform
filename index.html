@@ -13,34 +13,8 @@
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     
+    <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            purple: '#8B5CF6',
-                            dark: '#0D0C13',
-                            surface: '#1E1B2E',
-                            green: '#22c55e'
-                        }
-                    },
-                    animation: {
-                        'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0)' },
-                            '50%': { transform: 'translateY(-10px)' },
-                        }
-                    }
-                }
-            }
-        }
-    </script>
 </head>
 <body class="antialiased relative">
 
@@ -387,7 +361,5 @@
         <p class="mb-2 text-gray-500">© 2025 Takaidioma. Método Inteligente de Ensino.</p>
         <p class="max-w-lg mx-auto opacity-40">Este site não é afiliado ao Facebook ou Google.</p>
     </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

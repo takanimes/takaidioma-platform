@@ -1,3 +1,30 @@
+// Configuração do Tailwind
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                brand: {
+                    purple: '#8B5CF6',
+                    dark: '#0D0C13',
+                    surface: '#1E1B2E',
+                    green: '#22c55e'
+                }
+            },
+            animation: {
+                'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                'float': 'float 6s ease-in-out infinite',
+            },
+            keyframes: {
+                float: {
+                    '0%, 100%': { transform: 'translateY(0)' },
+                    '50%': { transform: 'translateY(-10px)' },
+                }
+            }
+        }
+    }
+}
+
+// Lógica das Pétalas Sakura
 document.addEventListener('DOMContentLoaded', () => {
     const container = document.getElementById('sakura-container');
     const isMobile = window.innerWidth < 768;
